@@ -23,8 +23,11 @@
         android:layout_height="wrap_content"
         android:onClick="addText"
         android:text="Add Text"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="253dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
 
     <EditText
         android:id="@+id/etEnterText"
@@ -33,7 +36,10 @@
         android:ems="10"
         android:inputType="text"
         android:text="Enter Text Here"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="46dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"/>
 
 </android.support.constraint.ConstraintLayout>
