@@ -17,7 +17,6 @@ public class MainActivity extends Activity {
 
     public void addText(View v){
         EditText etEnterText = (EditText) findViewById(R.id.etEnterText);
-        Button btnAddText = (Button) findViewById(R.id.btnAddText);
         TextView helloText = (TextView) findViewById(R.id.helloText);
         helloText.setText(etEnterText.getText().toString());
     }
