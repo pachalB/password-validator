@@ -9,9 +9,11 @@ import static org.junit.Assert.*;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-public class ExampleUnitTest {
+public class ExampleUnitTest extends MainActivity {
     @Test
-    public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+    public void checkPassword() throws Exception {
+        assertTrue(verifyPassword("password")==1);
+        assertTrue(verifyPassword("1")==1);
+        assertTrue(verifyPassword("somepass")==2);
     }
 }
