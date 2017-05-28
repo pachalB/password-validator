@@ -16,4 +16,15 @@ public class ExampleUnitTest extends MainActivity {
         assertTrue(verifyPassword("1")==1);
         assertTrue(verifyPassword("somepass")==2);
     }
+
+    @Test
+    public void checkPasswordstage2() throws Exception {
+        assertTrue(verifyPassword("password")==3);
+        assertTrue(verifyPassword("1")==3);
+        assertTrue(verifyPassword("123")==2);
+        assertTrue(verifyPassword("REALLYgoodPassword76")==5);
+
+
+    }
+
 }

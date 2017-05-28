@@ -2,6 +2,7 @@ package com.acme.csci3130;
 
 import android.app.Activity;
 import android.os.Bundle;
+import java.lang.*;
 
 public class MainActivity extends Activity {
 
@@ -21,6 +22,19 @@ public class MainActivity extends Activity {
         if (x.length()>=8){
             count ++;
         }
+        //check for a digit
+        if (x.matches(".*\\d.*")){
+            count ++;
+        }
+        //check for upper and lower case
+        if (x.matches("^.*[A-Z]*[a-z].*")){
+            count ++;
+        }
+        //cant end in 123
+        if (!x.matches(".*(123)$")){
+            count ++;
+        }
+
 
         return count;
     }
