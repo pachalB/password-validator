@@ -27,7 +27,7 @@ public class SimpleEspressoTest {
     @Before
     public void initString()
     {
-        textToFind = "Hello World!";
+        textToFind = "Password is good";
     }
 
     @Test
@@ -35,7 +35,7 @@ public class SimpleEspressoTest {
     {
         //Tries to find the text on the screen
         //Return true if it matches the expected test
-        onView(withId(R.id.helloText)).check(matches(withText(textToFind)));
+        onView(withId(R.id.tvAnswer)).check(matches(withText(textToFind)));
 
         //Same thing but not using IDs
         //It does not makes much sense in this case

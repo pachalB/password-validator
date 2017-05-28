@@ -3,17 +3,28 @@ package com.acme.csci3130;
 import android.app.Activity;
 import android.os.Bundle;
 import java.lang.*;
+import android.widget.*;
+import android.view.View;
 
 public class MainActivity extends Activity {
+
+    Button btnEnter;
+    TextView tvAnswer;
+    EditText etPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        tvAnswer=(TextView)findViewById(R.id.tvAnswer);
     }
 
-    public int verifyPassword(String x){
+    public void verifyPassword(View v){
+        TextView answer = (TextView) findViewById(R.id.tvAnswer);
+        EditText password = (EditText) findViewById(R.id.etPassword);
+        String x = password.getText().toString();
 
+        answer.setText("");
         int count = 0;
 
         if (!x.equals("password")){
@@ -35,7 +46,13 @@ public class MainActivity extends Activity {
             count ++;
         }
 
-
-        return count;
+        answer.setText(count);
+        /*
+        if (count==5){
+            answer.setText("Password is good");
+        }
+        else{
+            answer.setText("Password is weak");
+        }*/
     }
 }
