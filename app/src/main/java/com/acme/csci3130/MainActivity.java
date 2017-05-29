@@ -16,7 +16,12 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tvAnswer=(TextView)findViewById(R.id.tvAnswer);
+        Button enter = (Button) findViewById(R.id.btnEnter);
+        enter.setOnClickListener(new View.OnClickListener()   {
+            public void onClick(View v)  {
+                verifyPassword(v);
+            }
+        });
     }
 
     public void verifyPassword(View v){

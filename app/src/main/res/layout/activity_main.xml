@@ -10,7 +10,6 @@
         android:id="@+id/btnEnter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="verifyPassword"
         android:text="Enter"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
