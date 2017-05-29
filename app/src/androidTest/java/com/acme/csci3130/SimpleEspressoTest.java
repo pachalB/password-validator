@@ -13,10 +13,13 @@ import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import  android.support.test.espresso.ViewAction;
+
+import java.lang.*;
 
 @RunWith(AndroidJUnit4.class)
 @LargeTest
-public class SimpleEspressoTest {
+public class SimpleEspressoTest extends MainActivity{
 
     private String textToFind;
 
@@ -33,13 +36,9 @@ public class SimpleEspressoTest {
     @Test
     public void findText()
     {
-        //Tries to find the text on the screen
-        //Return true if it matches the expected test
-        onView(withId(R.id.tvAnswer)).check(matches(withText(textToFind)));
-
-        //Same thing but not using IDs
-        //It does not makes much sense in this case
-        onView(withText(textToFind)).check(matches(withText(textToFind)));
+        String eatDick;
+        onView(withId(R.id.etPassword)).perform(replaceText("Brogan1778ppasf"));
+        onView(withId(R.id.btnEnter)).perform(click());
     }
 
 

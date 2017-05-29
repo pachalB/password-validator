@@ -46,13 +46,11 @@ public class MainActivity extends Activity {
             count ++;
         }
 
-        answer.setText(count);
-        /*
         if (count==5){
             answer.setText("Password is good");
         }
         else{
             answer.setText("Password is weak");
-        }*/
+        }
     }
 }
